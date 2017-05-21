@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/title/{str}', function ($str) {
+    return view('welcome',[
+        'title' => $str
+    ]);
 });
